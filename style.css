@@ -46,7 +46,7 @@ p {
 }
 
 
-.background-image-scroll {
+/* .background-image-scroll {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,7 +63,7 @@ p {
   &#three {
     background-image: url('images/2F921D37-9588-4C87-BC78-5B31366B9160.png');
   }
-}
+} */
 
 .info {
   width: 90%;
