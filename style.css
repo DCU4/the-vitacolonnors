@@ -26,8 +26,7 @@ body {
 }
 
 main {
-  max-width: 600px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   padding: 4rem 0;
 }
@@ -44,4 +43,31 @@ h2 {
 p {
   line-height: 1.6;
   margin-bottom: 1rem;
+}
+
+
+.background-image-scroll {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+
+  &#one {
+    background-image: url('images/IMG_8147.png');
+  }
+  &#two {
+    background-image: url('images/IMG_8149.png');
+  }
+  
+  &#three {
+    background-image: url('images/2F921D37-9588-4C87-BC78-5B31366B9160.png');
+  }
+}
+
+.info {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 0;
 }
