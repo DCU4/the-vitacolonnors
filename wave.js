@@ -11,7 +11,8 @@ canvas.width = 750;
 canvas.height = 500;
 
 // Available shades of blue so each line can have its own tone.
-const blueShades = ['#419BC7', '#1B5E8C', '#7EC8E3', '#0A3D62', '#5DADE2', '#2E86C1'];
+const blueShades = ['#419BC7', '#5DADE2', '#2E86C1'];
+// const blueShades = ['#419BC7', '#1B5E8C', '#7EC8E3', '#0A3D62', '#5DADE2', '#2E86C1'];
 
 // Each wave stores its own base position, motion speed, color, and bobbing behavior.
 const waves = Array.from({ length: 8 }, () => ({

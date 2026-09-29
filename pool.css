@@ -1,0 +1,24 @@
+.pool-svg {
+  margin: 4rem ;
+  overflow: hidden;
+  border-radius: 2rem;
+  /* clip-path: inset(0); */
+    /* clip-path: path('M50,10 C70,10 85,25 85,45 C85,60 75,70 65,75 C75,80 85,90 85,110 C85,130 70,145 50,145 C30,145 15,130 15,110 C15,90 25,80 35,75 C25,70 15,60 15,45 C15,25 30,10 50,10 Z'); */
+  /* filter: blur(10px) contrast(20); The magic combo */
+  svg {
+    background-color: #A9E0FF;
+
+    path {
+      /* animation: move-it 5s infinite; */
+      transform:translate3d(0,0,0);
+      transition: transform 0.5s ease;
+
+    }
+  }
+}
+
+@keyframes move-it {
+  0% {
+
+  }
+}

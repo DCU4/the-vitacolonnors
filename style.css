@@ -90,31 +90,49 @@ p {
     left: 4rem;
     width: 750px;
     height: 500px;
-    border-radius: 2rem;
-    &::after {
+    border-radius: 1.5rem;
+    border: none;
+    overflow: hidden;
+    /* background: #419BC7; */
+    /* background: #D8F3FF; */
+    background: #70dff2;
+
+
+    /* border-radius: 2rem; */
+    /* &::after {
       content: '';
       background-color: lightgrey;
       border-radius: 2rem;
       position: absolute;
       inset: -2rem;
       z-index: 1;
-    }
-    .wave {
+      background-image: url('images/rock-pattern.png');
+      background-size: 100%;
+      background-position: top;
+      background-repeat: no-repeat;
+    } */
+    /* .wave {
       position: absolute;
       top: 0;
       left: 0;
       z-index: 2;
       border-radius: 2rem;
-    }
+    } */
 
-    .floatie-link {
+    /* .floatie-link {
       position: absolute;
       left: 0;
       top: 0;
       z-index: 3;
       will-change: transform;
-    }
+    } */
   }
+
+      /* border-radius: 1.5rem;
+    border: 2px solid rgba(120, 120, 120, 0.9);
+    overflow: hidden;
+    background: #d8f3ff;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,0.3); */
 
   .deck {
     position: relative;
@@ -132,3 +150,4 @@ p {
     }
   }
 }
+
