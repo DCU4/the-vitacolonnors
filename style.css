@@ -2,6 +2,19 @@
   --background-color: #f5f5f5;
   --text-color: #444;
   --green-color: #357937;
+  --shadow: -1rem 10px 0 rgba(0, 0, 0, 0.25);
+
+  --r: rgb(255, 40, 40);
+  --rT: rgba(255, 40, 40, 0);
+
+  --w: rgb(240, 240, 240);
+  --wT: rgba(240, 240, 240, 0);
+
+  --o: rgb(255, 180, 70);
+  --oT: rgba(255, 180, 70, 0);
+
+  --do: rgb(232, 144, 0);
+  --doT: rgba(232, 144, 0, 0);
 }
 
 * {
@@ -64,6 +77,7 @@ p {
   padding: 0;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   background-color: var(--green-color);
 
   .pool-border {
@@ -96,7 +110,7 @@ p {
       top: 50%;
       right: -1rem;
       transform: translateY(-50%);
-      box-shadow: -1rem 10px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: var(--shadow);
     }
 
     .floatie-link {
@@ -159,12 +173,84 @@ p {
     width: 500px;
     margin: 0 2rem;
     flex: 1;
-    background: FireBrick;
+    background: rgb(178, 99, 34);
+    box-shadow: var(--shadow);
+
+    .parasol {
+
+      background:
+        /* top */
+        radial-gradient(100% 200% at 50% 100%, var(--r) 50%, var(--rT) 50.25%) 50% 1.5em / 9em 12em,
+        radial-gradient(100% 200% at 50% 100%, var(--w) 50%, var(--wT) 50.25%) 50% 1.5em / 21em 12em,
+        radial-gradient(100% 200% at 50% 100%, var(--r) 50%, var(--rT) 50.25%) 50% 1.5em / 30em 12em,
+
+        /* pointy ends */
+        /* radial-gradient(105% 200% at 50% 100%, var(--rT) 49%, var(--r) 50%) 0 13.5em / 4.5em 3em,
+        radial-gradient(105% 200% at 50% 100%, var(--wT) 49%, var(--w) 50%) 4.5em 13.5em / 6em 3em,
+        radial-gradient(105% 200% at 50% 100%, var(--rT) 49%, var(--r) 50%) 50% 13.5em / 9em 3em,
+        radial-gradient(105% 200% at 50% 100%, var(--wT) 49%, var(--w) 50%) 19.5em 13.5em / 6em 3em,
+        radial-gradient(105% 200% at 50% 100%, var(--rT) 49%, var(--r) 50%) 25.5em 13.5em / 4.5em 3em, */
+
+        /* pole */
+        radial-gradient(200% 200% at 100% 100%, var(--do) 49%, var(--doT) 50%) 14em 0 / 1em 1em,
+        radial-gradient(200% 200% at 0% 100%, var(--o) 49%, var(--oT) 50%) 15em 0 / 1em 1em,
+        linear-gradient(90deg, var(--do) 50%, var(--o) 50%) 14em 1em / 2em 25em
+        /* curve in pole */
+        /* radial-gradient(100% 200% at 50% 0, var(--oT) 0.95em, var(--o) 1em, var(--o) 1.95em, var(--do) 2em, var(--do) 2.95em, var(--doT) 3em) 14em 26em / 6em 3em, */
+        /* radial-gradient(200% 200% at 100% 100%, var(--o) 49%, var(--oT) 50%) 18em 25em / 1em 1em, */
+        /* radial-gradient(200% 200% at 0% 100%, var(--do) 49%, var(--doT) 50%) 19em 25em / 1em 1em */
+      ;
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      font-size: 10px;
+      width: 30em;
+      height: 29em;
+      box-shadow: var(--shadow);
+    }
+
+    .umbrella-wrapper {
+      border-radius: 50%;
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 99;
+      width: 15rem;
+      height: 15rem;
+      box-shadow: var(--shadow);
+    }
+
+    .umbrella {
+      /* red and white many stripes with linear gradient */
+      width: 15rem;
+      height: 15rem;
+      background: repeating-conic-gradient(var(--r) 0% 16.666%, var(--w) 16.666% 33.333%, var(--r) 33.333% 50%, var(--w) 50% 66.666%, var(--r) 66.666% 83.333%, var(--w) 83.333% 100%) 50% 50% / 15rem 15rem;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      animation: pure-rotate 3s linear infinite;
+      animation-play-state: paused;
+
+      &:hover {
+        animation-play-state: running;
+      }
+    }
+
+    .deck-stairs {
+      position: absolute;
+      top: 50%;
+      left: -4rem;
+      width: 4rem;
+      height: 300px;
+      transform: translateY(-50%);
+      background: rgb(150, 75, 0);
+    }
 
     .info {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 1rem;
+      left: 1rem;
       width: 100%;
       height: 100%;
       opacity: 0;
@@ -185,6 +271,16 @@ p {
   to {
     transform:
       rotate(360deg) rotateX(20deg) rotate(0deg);
+  }
+}
+
+@keyframes pure-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
 
