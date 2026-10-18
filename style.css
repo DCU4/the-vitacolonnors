@@ -90,6 +90,38 @@ p {
     flex: 1.5;
   }
 
+  .pool-towel { 
+    background: repeating-linear-gradient(
+      to right,
+      #078a83,
+      #078a83 10px,
+      #ffffff 10px,
+      #ffffff 20px
+    );
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    transform: rotate(-10deg);
+    animation-composition: add;
+
+    &.red {
+      background: repeating-linear-gradient(
+        to right,
+        #ff0000,
+        #ff0000 10px,
+        #ffffff 10px,
+        #ffffff 20px
+      );
+      bottom: 50px;
+      left: 400px;
+      /* transform: rotate(10deg); */
+
+    }
+  }
+
+
   .pool {
     position: relative;
     width: 750px;
@@ -113,6 +145,29 @@ p {
       box-shadow: var(--shadow);
     }
 
+    .floatie-wrapper {
+
+      &:nth-child(1) .floatie-link {
+        top: 50px;
+        left: 50px;
+        width: 200px;
+        height: 200px;
+        animation: rotate 24s infinite linear, float 7s infinite ease-in-out;
+      }
+
+      &:nth-child(2) .floatie-link {
+        top: 300px;
+        left: 150px;
+        animation: rotate 24s infinite linear, float 3s infinite ease-in-out;
+      }
+
+      &:nth-child(3) .floatie-link {
+        top: 80px;
+        left: 350px;
+        animation: rotate 24s infinite linear, float 4s infinite ease-in-out;
+      }
+    }
+
     .floatie-link {
       color: var(--text-color);
       position: absolute;
@@ -127,7 +182,7 @@ p {
       box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
 
       perspective: 10em;
-      animation: rotate 24s infinite linear, float 7s infinite ease-in-out;
+      will-change: transform;
       animation-composition: add;
 
       transition: color .4s ease;
@@ -145,24 +200,6 @@ p {
         display: block;
       }
 
-      &:nth-child(1) {
-        top: 50px;
-        left: 50px;
-        width: 200px;
-        height: 200px;
-      }
-
-      &:nth-child(2) {
-        top: 300px;
-        left: 150px;
-        animation: rotate 24s infinite linear, float 3s infinite ease-in-out;
-      }
-
-      &:nth-child(3) {
-        bottom: 300px;
-        left: 400px;
-        animation: rotate 24s infinite linear, float 4s infinite ease-in-out;
-      }
     }
   }
 
@@ -255,10 +292,94 @@ p {
       height: 100%;
       opacity: 0;
 
+      * {
+        opacity: 0;
+        animation: fade-in 1s ease-in-out .6s forwards;
+      }
+
       &.revealed {
         opacity: 1;
       }
     }
+  }
+}
+
+.drop-in {
+  animation: drop-in .4s ease-in-out forwards;
+  transform: translateY(-100vh);
+
+  &.fast {
+    animation-duration: .4s;
+  }
+
+  &.slow {
+    animation-duration: .6s;
+  }
+
+  &.delay-1 {
+    animation-delay: .1s;
+  }
+
+  &.delay-2 {
+    animation-delay: .2s;
+  }
+
+  &.delay-3 {
+    animation-delay: .3s;
+  }
+
+  &.delay-4 {
+    animation-delay: .4s;
+  }
+
+  &.delay-5 {
+    animation-delay: .5s;
+  }
+}
+
+.pop-up {
+  animation: pop-up .4s ease-in-out forwards;
+  transform: translateY(100vh);
+
+  &.delay-1 {
+    animation-delay: .1s;
+  }
+
+  &.delay-2 {
+    animation-delay: .2s;
+  }
+
+  &.delay-3 {
+    animation-delay: .3s;
+  }
+
+  &.delay-4 {
+    animation-delay: .4s;
+  }
+
+  &.delay-5 {
+    animation-delay: .5s;
+  }
+}
+
+@keyframes pop-up {
+  from {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes drop-in {
+  from {
+    transform: translateY(-100vh);
+  }
+
+  to {
+    transform: translateY(0);
   }
 }
 
@@ -275,11 +396,11 @@ p {
 }
 
 @keyframes pure-rotate {
-  from {
+  0% {
     transform: rotate(0deg);
   }
 
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
@@ -295,5 +416,15 @@ p {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
