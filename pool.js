@@ -70,8 +70,11 @@
       // the wavePointStart needs to reset, regardless of phase
 
       let wavePointStart = (xBlob - rx)
-      // TODO: need to make this dynamic based on the length of the blob
-      wavePoint = wavePointStart;
+        let wave = Math.sin((wavePoint - wavePointStart) / lenOfBlob * Math.PI * 2 + phase) * blob.ry * 0.5;
+      // TODO: need to make this dynamic based on the length of the blob using sin wave
+      wavePoint = wavePointStart+ wave
+      //   const wave = Math.sin(t * Math.PI * 2 + phase) * blob.ry * 0.5;;
+
 
       // need to get to lenOfBlob
       // OR use lenOfBlob to calc sin wave
