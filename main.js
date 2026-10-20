@@ -12,9 +12,11 @@ document.querySelectorAll('.floatie-link').forEach(link => {
     document.querySelectorAll('.info.revealed').forEach(section => {
       if (section !== targetSection) {
         section.classList.remove('revealed');
+        section.classList.remove('delay-2');
       }
     });
 
     targetSection.classList.add('revealed');
+    targetSection.classList.add('delay-2');
   });
 });

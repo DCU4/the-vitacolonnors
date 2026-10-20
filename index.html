@@ -53,7 +53,7 @@
                 font-weight="bold"
                 letter-spacing="2"
                 text-anchor="middle">
-                <textPath href="#circlePath" startOffset="50%">HOTELS HOTELS HOTELS HOTELS HOTELS</textPath>
+                <textPath href="#circlePath" startOffset="50%">HOTELS HOTELS HOTELS HOTELS</textPath>
               </text>
             </svg>
           </a>
@@ -80,29 +80,42 @@
 
         <span class="diving-board"></span>
       </div>
-      <div class="pool-towel pop-up"></div>
-      <!--<div class="pool-towel red pop-up delay-2"></div>-->
+      
+      <div class="pool-towel-wrapper pop-up">
+        <div class="pool-towel"></div>
+      </div>
+      <div class="pool-towel-wrapper pop-up delay-2">
+        <div class="pool-towel red"></div>
+        </div> 
     </div>
 
 
     <section class="deck">
-      <span class="deck-stairs"></span>
-      <!-- <div class="parasol"></div> -->
+      <span class="deck-stairs"><span></span></span>
       <div class="umbrella-wrapper drop-in delay-5">
         <div class="umbrella"></div>
       </div>
       <div class="info revealed" id="welcome">
-        <h1>Welcome to Emily and Dylan's Wedding PARTY</h1>
+      <h1 class="banner">Welcome to Emily and Dylan's Wedding PARTY</h1>
 
-        <h2>Date</h2>
-        <p>July 18, 2027</p>
+        <div class="flex">
+          <div class="flex-item table" id="date">
+            <h2>Date</h2>
+            <p>July 18, 2027</p>
+            <p>12:00 PM - whenever</p>
+          </div>
 
-        <h2>Location</h2>
-        <p>9122 Cherrytree Dr.<br>
-          Alexandria, VA 22309</p>
+          <div class="flex-item table" id="location">
+            <h2>Location</h2>
+            <p>9122 Cherrytree Dr.<br>
+              Alexandria, VA 22309</p>
+          </div>
 
-        <h2>Time</h2>
-        <p>12:00 PM - whenever</p>
+          <!-- <div class="flex-item">
+            <h2>Time</h2>
+            <p>12:00 PM - whenever</p>
+          </div> -->
+        </div>
       </div>
       <div class="info" id="hotels">
         <h2>Hotel Options</h2>
@@ -112,8 +125,10 @@
         <p>There are a lot of cute hotel options in Old Town.</p>
       </div>
       <div class="info" id="faq">
-        <h2>Questions?</h2>
-        <p>Please reach out!</p>
+        <div class="table">
+          <h2>Questions?</h2>
+          <p>Please reach out!</p>
+        </div>
       </div>
     </section>
   </main>
