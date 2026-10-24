@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Jua&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Emily and Dylan's Wedding</title>
 </head>
@@ -30,7 +33,7 @@
               <circle cx="50" cy="50" r="38" fill="none" stroke="none" />
 
               <text fill="currentColor" 
-                font-family="Avenir, sans-serif" 
+                font-family="Jua, sans-serif" 
                 font-size="10" 
                 font-weight="bold"
                 letter-spacing="2"
@@ -41,19 +44,19 @@
           </a>
         </div>
         <div class="floatie-wrapper drop-in delay-2">
-          <a class="floatie-link" href="#hotels">
+          <a class="floatie-link" href="#travel">
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img">
               <defs>
                 <path id="circlePath" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
               </defs>
               <circle cx="50" cy="50" r="38" fill="none" stroke="none" />
               <text fill="currentColor" 
-                font-family="Avenir, sans-serif" 
+                font-family="Jua, sans-serif" 
                 font-size="10" 
                 font-weight="bold"
                 letter-spacing="2"
                 text-anchor="middle">
-                <textPath href="#circlePath" startOffset="50%">HOTELS HOTELS HOTELS HOTELS</textPath>
+                <textPath href="#circlePath" startOffset="50%">TRAVEL TRAVEL TRAVEL TRAVEL</textPath>
               </text>
             </svg>
           </a>
@@ -67,7 +70,7 @@
               <circle cx="50" cy="50" r="38" fill="none" stroke="none" />
               <text 
                 fill="currentColor" 
-                font-family="Avenir, sans-serif" 
+                font-family="Jua, sans-serif" 
                 font-size="10" 
                 font-weight="bold"
                 letter-spacing="2"
@@ -96,8 +99,11 @@
         <div class="umbrella"></div>
       </div>
       <div class="info revealed" id="welcome">
-      <h1 class="banner">Welcome to Emily and Dylan's Wedding PARTY</h1>
-
+        <div class="long-table">
+          <h1 class="banner">Emily and Dylan's <br> Celebration of Marriage</h1>
+          <p>Please come help us celebrate our recent marriage at a pool party this summer. </p>
+          <p>Click a floatie in the pool to navigate</p>
+        </div>
         <div class="flex">
           <div class="flex-item table" id="date">
             <h2>Date</h2>
@@ -105,27 +111,24 @@
             <p>12:00 PM - whenever</p>
           </div>
 
-          <div class="flex-item table" id="location">
-            <h2>Location</h2>
-            <p>9122 Cherrytree Dr.<br>
-              Alexandria, VA 22309</p>
-          </div>
-
-          <!-- <div class="flex-item">
-            <h2>Time</h2>
-            <p>12:00 PM - whenever</p>
-          </div> -->
         </div>
       </div>
-      <div class="info" id="hotels">
-        <h2>Hotel Options</h2>
-        <h3>Hampton Inn & Suites Fort Belvoir</h3>
-        <p>This is the closest to the location.</p>
-        <h3>Alexandria VA Old Town</h3>
-        <p>There are a lot of cute hotel options in Old Town.</p>
+      <div class="info" id="travel">
+        <div class="long-table">
+          <h2>Travel</h2>
+          <h3>Hampton Inn & Suites Fort Belvoir</h3>
+          <p>This is the closest to the location.</p>
+          <h3>Alexandria VA Old Town</h3>
+          <p>There are a lot of cute hotel options in Old Town.</p>
+        </div>
       </div>
       <div class="info" id="faq">
-        <div class="table">
+        <div class="flex-item table" id="location">
+          <h2>Location</h2>
+          <p>9122 Cherrytree Dr.<br>
+            Alexandria, VA 22309</p>
+        </div>
+        <div class="table" id="questions">
           <h2>Questions?</h2>
           <p>Please reach out!</p>
         </div>

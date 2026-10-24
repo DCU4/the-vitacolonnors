@@ -29,7 +29,12 @@ html {
 
 body {
   font-size: 16px;
-  font-family: Avenir, sans-serif;
+  /* font-family: Avenir, sans-serif; */
+  font-family: "Jua", sans-serif;
+
+  /* font-family: "Press Start 2P", system-ui; */
+  /* font-weight: 400; */
+  font-style: normal;
   background-color: var(--background-color);
   color: var(--text-color);
   /* &.dark-mode {
@@ -47,6 +52,7 @@ main {
 h1 {
   /* font-size: 2.5rem; */
   margin-bottom: 2rem;
+  font-weight: normal;
 }
 
 h2 {
@@ -299,7 +305,7 @@ p {
 
     .info {
       position: absolute;
-      top: 1rem;
+      top: 0rem;
       left: calc(50% + 1rem);
       width: 100%;
       height: 100%;
@@ -367,11 +373,15 @@ p {
   justify-content: center;
   box-shadow: var(--box-shadow);
 
-  &#date {
-    transform: translate(1rem, -1rem);
+  &#location {
+    transform: translate(14rem, 1rem);
   }
 
-  &#location {
+  &#questions {
+    transform: translate(6rem, 3rem);
+  }
+
+  &#date {
     transform: translate(1rem, 1rem);
   }
   h2 {
@@ -382,6 +392,27 @@ p {
   }
 }
 
+.long-table {
+  background-color: #f0f0f0;
+  color: var(--text-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: calc(100% - 1.75rem);
+  box-shadow: var(--box-shadow);
+}
+
+.banner {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+
+  span {
+    display: block;
+    font-size: .85rem;
+    margin-top: 0.5rem;
+    font-weight: normal;
+  }
+}
 
 
 
