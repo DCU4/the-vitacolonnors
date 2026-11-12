@@ -216,7 +216,7 @@ p {
         animation: rotate 24s infinite linear, float 3s infinite ease-in-out;
 
         @media (max-width: 768px) {
-          top: 110px;
+          top: 100px;
           left: 100px;
         }
       }
@@ -318,7 +318,7 @@ p {
         height: 7rem;
         bottom: auto;
         top: 32rem;
-        right: 0;
+        right: 1rem;
       }
     }
 
@@ -520,6 +520,7 @@ p {
 
   @media (max-width: 768px) {
     width: 100%;
+    text-align: center;
   }
 }
 
