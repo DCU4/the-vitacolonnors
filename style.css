@@ -319,6 +319,8 @@ p {
         bottom: auto;
         top: 32rem;
         right: 1rem;
+        animation: none !important;
+        transform: none !important;
       }
     }
 
