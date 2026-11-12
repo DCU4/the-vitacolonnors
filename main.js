@@ -1,6 +1,9 @@
 // Clicking a floatie reveals its matching section while closing any other open sections.
 document.querySelectorAll('.floatie-link').forEach(link => {
   link.addEventListener('click', event => {
+    // desktop only
+    if (!window.matchMedia('(min-width: 768px)').matches) return;
+
     event.preventDefault();
 
     const targetId = link.getAttribute('href')?.replace('#', '');

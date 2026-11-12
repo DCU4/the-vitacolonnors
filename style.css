@@ -69,11 +69,16 @@ p {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 0;
+
+  @media (max-width: 768px) {
+    padding: 1rem 0;
+  }
 }
 
 
 
 .backyard {
+  background-color: var(--green-color);
   color: var(--background-color);
   display: flex;
   justify-content: space-between;
@@ -84,7 +89,11 @@ p {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: var(--green-color);
+
+  @media (max-width: 768px) {
+    display: block;
+    overflow: auto;
+  }
 
   .pool-border {
     position: relative;
@@ -94,6 +103,10 @@ p {
     background-repeat: no-repeat;
     padding: 3.5rem;
     flex: 1.5;
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
   }
 
   .pool-towel-wrapper {
@@ -103,9 +116,19 @@ p {
     bottom: 50px;
     left: 100px;
 
+    @media (max-width: 768px) {
+      width: 100px;
+      height: 50px;
+      left: 25px;
+    }
+
     +.pool-towel-wrapper {
       bottom: 50px;
       left: 400px;
+
+      @media (max-width: 768px) {
+        left: 150px;
+      }
     }
 
     .pool-towel {
@@ -130,6 +153,7 @@ p {
             #ffffff 10px,
             #ffffff 20px);
         transform: rotate(10deg);
+
         &:hover {
           transform: rotate(-10deg);
         }
@@ -150,6 +174,11 @@ p {
     background-position: center;
     background-repeat: no-repeat;
 
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 200px;
+    }
+
     .diving-board {
       width: 200px;
       height: 50px;
@@ -159,6 +188,11 @@ p {
       right: -1rem;
       transform: translateY(-50%);
       box-shadow: var(--box-shadow);
+
+      @media (max-width: 768px) {
+        width: 100px;
+        height: 50px;
+      }
     }
 
     .floatie-wrapper {
@@ -169,18 +203,33 @@ p {
         width: 200px;
         height: 200px;
         animation: rotate 24s infinite linear, float 7s infinite ease-in-out;
+
+        @media (max-width: 768px) {
+          top: 25px;
+          left: 25px;
+        }
       }
 
       &:nth-child(2) .floatie-link {
         top: 300px;
         left: 150px;
         animation: rotate 24s infinite linear, float 3s infinite ease-in-out;
+
+        @media (max-width: 768px) {
+          top: 110px;
+          left: 100px;
+        }
       }
 
       &:nth-child(3) .floatie-link {
         top: 80px;
         left: 350px;
         animation: rotate 24s infinite linear, float 4s infinite ease-in-out;
+
+        @media (max-width: 768px) {
+          top: 40px;
+          left: 175px;
+        }
       }
     }
 
@@ -203,6 +252,12 @@ p {
 
       transition: color .4s ease;
 
+      @media (max-width: 768px) {
+        width: 80px !important;
+        height: 80px !important;
+        border-width: 20px !important;
+      }
+
       &:hover {
         color: rgb(35, 90, 255);
       }
@@ -214,6 +269,12 @@ p {
         height: calc(100% + 100px);
         pointer-events: none;
         display: block;
+
+        @media (max-width: 768px) {
+          inset: -20px;
+          width: calc(100% + 40px);
+          height: calc(100% + 40px);
+        }
       }
 
     }
@@ -235,6 +296,13 @@ p {
         #c57e44 5px,
         #c57e44 80px);
 
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: column;
+    }
+
     .umbrella-wrapper {
       border-radius: 50%;
       position: absolute;
@@ -244,17 +312,29 @@ p {
       width: 15rem;
       height: 15rem;
       box-shadow: var(--box-shadow);
+
+      @media (max-width: 768px) {
+        width: 7rem;
+        height: 7rem;
+        bottom: auto;
+        top: 32rem;
+        right: 0;
+      }
     }
 
     .umbrella {
       /* red and white many stripes with linear gradient */
-      width: 15rem;
-      height: 15rem;
+      width: 100%;
+      height: 100%;
       background: repeating-conic-gradient(var(--r) 0% 16.666%, var(--w) 16.666% 33.333%, var(--r) 33.333% 50%, var(--w) 50% 66.666%, var(--r) 66.666% 83.333%, var(--w) 83.333% 100%) 50% 50% / 15rem 15rem;
       border-radius: 50%;
       background-repeat: no-repeat;
       animation: pure-rotate 3s linear infinite;
       animation-play-state: paused;
+
+      @media (max-width: 768px) {
+        animation-play-state: running;
+      }
 
       &:hover {
         animation-play-state: running;
@@ -313,9 +393,33 @@ p {
       transform: translateX(-50%);
       animation-delay: .8s;
 
+      @media (max-width: 768px) {
+        position: static;
+        transform: none;
+        opacity: 1;
+      }
+
       &.revealed {
         opacity: 0;
         animation: fade-in .5s ease-in-out .7s forwards;
+      }
+
+      &#welcome {
+        @media (max-width: 768px) {
+          order: 1;
+        }
+      }
+
+      &#faq {
+        @media (max-width: 768px) {
+          order: 2;
+        }
+      }
+
+      &#travel {
+        @media (max-width: 768px) {
+          order: 3;
+        }
       }
     }
   }
@@ -375,18 +479,32 @@ p {
 
   &#location {
     transform: translate(14rem, 1rem);
+
+    @media (max-width: 768px) {
+      transform: translate(1rem, 0rem);
+    }
   }
 
   &#questions {
     transform: translate(6rem, 3rem);
+
+    @media (max-width: 768px) {
+      transform: translate(7rem, 1rem);
+    }
   }
 
   &#date {
     transform: translate(1rem, 1rem);
+
+    @media (max-width: 768px) {
+      transform: translate(0, 1rem);
+    }
   }
+
   h2 {
     margin: 0 0 .25rem;
   }
+
   p {
     margin: 0;
   }
@@ -399,6 +517,10 @@ p {
   padding: 1rem;
   width: calc(100% - 1.75rem);
   box-shadow: var(--box-shadow);
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .banner {
@@ -420,10 +542,20 @@ p {
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .flex-item {
   /* flex: 1; */
+}
+
+.m-dn {
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 @keyframes pop-up {
