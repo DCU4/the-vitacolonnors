@@ -93,6 +93,7 @@ p {
   @media (max-width: 1080px) {
     display: block;
     overflow: auto;
+    scroll-behavior: smooth;
   }
 
   .pool-border {
